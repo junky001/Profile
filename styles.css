@@ -1,0 +1,241 @@
+:root {
+  --bg: #25282b;          /* page background */
+  --heading: #ffffff;     /* headings */
+  --text: #c9ced3;        /* paragraphs */
+  --accent: #ffd400;      /* links and buttons (the only bright color) */
+  --accent-dark: #e0b800; /* button hover */
+  --line: #3d4247;        /* borders and dividers */
+  --font-head: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+  --font-body: "DM Sans", "Segoe UI", Arial, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-head);
+  line-height: 1.1;
+  margin: 0;
+  color: var(--heading);
+}
+
+a { color: var(--accent); }
+
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1.25rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--heading);
+  text-decoration: none;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid var(--line);
+}
+
+.nav { display: flex; gap: 1.5rem; }
+.nav a { color: var(--text); text-decoration: none; font-weight: 500; }
+.nav a:hover { color: var(--accent); }
+
+.nav-toggle {
+  display: none;
+  font: inherit;
+  padding: 0.4rem 0.9rem;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--heading);
+  cursor: pointer;
+}
+
+/* Layout */
+main, .site-footer { max-width: 60rem; margin: 0 auto; padding: 0 1.25rem; }
+
+.hero { padding: 5rem 0 4rem; }
+
+.hero h1 {
+  font-size: clamp(2.4rem, 7vw, 4.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  max-width: 14em;
+}
+
+.lead { max-width: 36em; font-size: 1.15rem; margin: 1.25rem 0 0; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+
+.btn {
+  display: inline-block;
+  font: inherit;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: 2px solid var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-primary { background: var(--accent); color: #1d1f20; }
+.btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+.btn-ghost { background: transparent; color: var(--accent); }
+.btn-ghost:hover { background: var(--accent); color: #1d1f20; }
+
+.section { padding: 3.5rem 0; border-top: 1px solid var(--line); }
+.section h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin-bottom: 1.75rem; }
+
+/* About roles */
+.role {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+}
+.role:nth-of-type(even) { grid-template-columns: 1fr 16rem; }
+.role:nth-of-type(even) img { order: 2; }
+
+.role img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 12px;
+  border: 2px solid var(--line);
+}
+
+.role h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.role-text p { margin: 0 0 0.75rem; max-width: 36em; }
+
+/* Projects */
+.projects { list-style: none; margin: 0; padding: 0; }
+
+.project {
+  display: grid;
+  grid-template-columns: 11rem 1fr auto;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.5rem 0 1.5rem 1rem;
+  border-top: 1px solid var(--line);
+  border-left: 4px solid transparent;
+  transition: border-color 0.2s;
+}
+.project:last-child { border-bottom: 1px solid var(--line); }
+.project:hover, .project:focus-within { border-left-color: var(--accent); }
+
+.project-kind { font-weight: 500; padding-top: 0.2rem; }
+.project h3 { font-size: 1.4rem; margin-bottom: 0.4rem; }
+.project p { margin: 0 0 0.4rem; max-width: 36em; }
+.project .tags { font-size: 0.95rem; opacity: 0.8; }
+.project-link { font-weight: 500; white-space: nowrap; padding-top: 0.2rem; }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem 1.5rem; margin: 0; }
+.skills dt { font-weight: 500; color: var(--heading); }
+.skills dd { margin: 0; }
+
+/* FAQ */
+#faq details { border-top: 1px solid var(--line); padding: 1rem 0; }
+#faq details:last-of-type { border-bottom: 1px solid var(--line); }
+
+#faq summary {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--heading);
+  cursor: pointer;
+}
+
+#faq details p { margin: 0.75rem 0 0; max-width: 36em; }
+
+/* Contact */
+.contact-form { display: grid; gap: 0.5rem; max-width: 32rem; margin-top: 1.5rem; }
+.contact-form label { font-weight: 500; margin-top: 0.5rem; color: var(--heading); }
+.contact-form input, .contact-form textarea {
+  font: inherit;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #4a5056;
+  border-radius: 8px;
+  background: #1b1d20;
+  color: var(--heading);
+}
+.contact-form button { margin-top: 1rem; justify-self: start; }
+.alt-contact { margin-top: 1.5rem; }
+
+/* Footer */
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+.site-footer p { margin: 0; }
+
+/* Mobile */
+@media (max-width: 700px) {
+  .nav-toggle { display: inline-block; }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav.open { display: flex; }
+  .nav a { padding: 0.9rem 1.25rem; border-top: 1px solid var(--line); }
+
+  .hero { padding: 3rem 0 2.5rem; }
+
+  .role,
+  .role:nth-of-type(even) { grid-template-columns: 1fr; gap: 1rem; }
+  .role:nth-of-type(even) img { order: 0; }
+
+  .project { grid-template-columns: 1fr; gap: 0.5rem; }
+  .skills { grid-template-columns: 1fr; gap: 0.25rem; }
+  .skills dd { margin-bottom: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .project { transition: none; }
+}

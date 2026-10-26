@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jounkey Olang | Web Developer</title>
+  <meta name="description" content="Jounkey Olang builds fast, mobile-friendly websites for schools, shops and small businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="#top">
+    <img class="avatar" src="images/pro-image-1.png" alt="Jounkey Olang"  width="50" height="50">
+    <span>Jounkey Olang</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <h1>I build websites that help your school, shop or business get found.</h1>
+      <p class="lead">I'm Jounkey, a web developer and student at JOOUST. I build clear, fast,
+         mobile-friendly sites with HTML, CSS and JavaScript.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#work">See my work</a>
+        <a class="btn btn-ghost" href="#contact">Hire me</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+  <h2>About me</h2>
+
+  <article class="role">
+    <img src="images/coding.png" alt="Jounkey Olang in a suit" width="300" height="200" loading="lazy">
+    <div class="role-text">
+      <h3>Software developer</h3>
+      <p>I'm a software developer and student at Jaramogi Oginga Odinga University of Science and Technology.</p>
+      <p>I build websites with HTML, CSS and JavaScript, and I'm learning React Native to build mobile apps too.</p>
+    </div>
+  </article>
+
+  <article class="role">
+    <img src="images/graphics.png" alt="A logo or poster I designed" width="300" height="200" loading="lazy">
+    <div class="role-text">
+      <h3>Graphics designer</h3>
+      <p>I design logos, posters and social media graphics that make a business look clear and professional.</p>
+      <p>Add one sentence here about the tools you use and the kind of work you enjoy most.</p>
+    </div>
+  </article>
+
+  <article class="role">
+    <img src="images/video-editing.png" alt="A video I edited" width="300" height="200" loading="lazy">
+    <div class="role-text">
+      <h3>Video editor</h3>
+      <p>I edit videos for events, promotions and social media, from cutting and sound to final export.</p>
+      <p>Add one sentence here about the tools you use and the kind of videos you've made.</p>
+    </div>
+  </article>
+</section>
+
+    <section id="work" class="section">
+      <h2>Recent work</h2>
+      <ul class="projects">
+        <li class="project">
+          <div class="project-kind">School website</div>
+          <div class="project-body">
+            <h3>Othoro Mixed Secondary School</h3>
+            <p>Home, admissions and contact pages with a sticky header, a hero section and admin cards.</p>
+            <p class="tags">HTML, CSS</p>
+          </div>
+          <!-- Replace # with your live link or GitHub repo -->
+          <a class="project-link" href="#">View project</a>
+        </li>
+        <li class="project">
+          <div class="project-kind">Restaurant page</div>
+          <div class="project-body">
+            <h3>Jounkey's Pizza Shop</h3>
+            <p>A menu table, an online order form and contact details, so customers can order without calling.</p>
+            <p class="tags">HTML, CSS</p>
+          </div>
+          <a class="project-link" href="#">View project</a>
+        </li>
+        <li class="project">
+          <div class="project-kind">Property management</div>
+          <div class="project-body">
+            <h3>Rental management app</h3>
+            <p>A landlord admin dashboard, chat between tenants and landlords, a tenant marketplace and a name-and-phone login.</p>
+            <p class="tags">Dashboard, chat, login</p>
+          </div>
+          <a class="project-link" href="#">View project</a>
+        </li>
+        <li class="project">
+          <div class="project-kind">Community site</div>
+          <div class="project-body">
+            <h3>Christian Union website</h3>
+            <p>A welcoming homepage for a university Christian Union.</p>
+            <p class="tags">HTML, CSS</p>
+          </div>
+          <a class="project-link" href="https://jooustcu.org/">View project</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Building with</dt>
+        <dd>HTML, CSS, JavaScript, responsive layouts</dd>
+        <dt>Learning</dt>
+        <dd>React Native for mobile apps</dd>
+        <dt>Studying</dt>
+        <dd>Software development at Jaramogi Oginga Odinga University of Science and Technology</dd>
+      </dl>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Let's talk about your website</h2>
+      <p class="lead">Tell me what you need and I'll reply on WhatsApp.</p>
+      <form id="contact-form" class="contact-form">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+        <label for="message">What do you need built?</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button class="btn btn-primary" type="submit">Send on WhatsApp</button>
+      </form>
+      <!-- Replace with your real email -->
+      <p class="alt-contact">Prefer email? <a href="mailto:olangjounkey1@email.com">olangjounkey1@email.com</a></p>
+    </section>
+
+    <aside id="faq" class="section" aria-labelledby="faq-title">
+  <h2 id="faq-title">Frequently asked questions</h2>
+
+  <details>
+    <summary>What kinds of websites do you build?</summary>
+    <p>I build websites for schools, shops, restaurants and small businesses, including menus, order forms and contact pages.</p>
+  </details>
+
+  <details>
+    <summary>How long does a website take?</summary>
+    <p>A simple site takes 3 to 5 days.</p>
+  </details>
+
+  <details>
+    <summary>How much does it cost?</summary>
+    <p>The price depends on the project. Please contact me.</p>
+  </details>
+
+  <details>
+    <summary>Do you also do logos and video editing?</summary>
+    <p>Yes. I can design your logo and graphics and edit videos for your business, so everything looks consistent.</p>
+  </details>
+
+  <details>
+    <summary>How do we start?</summary>
+    <p>Send me a message on WhatsApp using the form below, tell me what you need, and I'll reply with the next steps to take.</p>
+  </details>
+</aside>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Jounkey Olang</p>
+    <p>
+      <!-- Replace with your real profile links -->
+      <a href="https://github.com/junky001">GitHub</a> ·
+      <a href="https://linkedin.com/in/Mr. jounkey">LinkedIn</a>
+    </p>
+  </footer>
+
+  <script src="/profile.js"></script>
+</body>
+</html>
