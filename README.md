@@ -42,6 +42,6 @@ No installation is needed.
 
 ## Contact me
 
-- WhatsApp: +254 XXX XXX XXX
-- Email: your@email.com
-- LinkedIn: https://linkedin.com/in/your-username
+- WhatsApp: +254740919279
+- Email: olangjounkey1@email.com
+- LinkedIn: https://linkedin.com/in/Mr.Jounkey
