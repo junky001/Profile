@@ -82,9 +82,16 @@ a { color: var(--accent); }
 }
 
 /* Layout */
-main, .site-footer { max-width: 60rem; margin: 0 auto; padding: 0 1.25rem; }
+main { 
+  max-width: 80%; 
+  margin: 0 auto; padding: 0 1.25rem;
+ }
 
-.hero { padding: 5rem 0 4rem; }
+main, .site-footer { max-width: 80rem; margin: 0 auto; padding: 0 1.25rem; }
+
+.hero { 
+  padding: 5rem 0 4rem;
+ }
 
 .hero h1 {
   font-size: clamp(2.4rem, 7vw, 4.6rem);
@@ -118,20 +125,20 @@ main, .site-footer { max-width: 60rem; margin: 0 auto; padding: 0 1.25rem; }
 /* About roles */
 .role {
   display: grid;
-  grid-template-columns: 16rem 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   align-items: center;
   padding: 1.5rem 0;
   border-top: 1px solid var(--line);
 }
-.role:nth-of-type(even) { grid-template-columns: 1fr 16rem; }
+
 .role:nth-of-type(even) img { order: 2; }
 
 .role img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: top;
+  max-width: 30rem;
+  height: auto;
+  justify-self: center;
   border-radius: 12px;
   border: 2px solid var(--line);
 }
