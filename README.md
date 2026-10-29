@@ -44,4 +44,4 @@ No installation is needed.
 
 - WhatsApp: +254740919279
 - Email: olangjounkey1@email.com
-- LinkedIn: https://linkedin.com/in/Mr.Jounkey
+- LinkedIn: https://www.linkedin.com/in/jounkey-olang-0917ab447?utm_source=share_via&utm_content=profile&utm_medium=member_android
